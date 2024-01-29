@@ -4,6 +4,9 @@ Bank-ATM demonstration using Object Oriented Programming **OOP**
 
 Start by executing main method in  ATMCase Study class 
 
+![ATM logo](/img/atm.png)
+
+
 https://github.com/syntax-tee/Bank-ATM/blob/main/src/main/java/com/ogunladetaiye/bank/bankatm/ATMCaseStudy.java
 
 Bank Accounts
