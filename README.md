@@ -1,6 +1,7 @@
 **Bank ATM- operations demonstation**
 
-Start by Running ATMCase Study class ATMCaseStudy.java
+Start by executing run method in  ATMCase Study class 
+https://github.com/syntax-tee/Bank-ATM/blob/main/src/main/java/com/ogunladetaiye/bank/bankatm/ATMCaseStudy.java
 
               **Bank Accounts**
 1. Account Number **12345**             Pin **54321**
