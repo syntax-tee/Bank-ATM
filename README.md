@@ -1,4 +1,7 @@
 **Bank ATM- operations demonstation**
+
+Start by Running ATMCase Study class ATMCaseStudy.java
+
               **Bank Accounts**
 1. Account Number **12345**             Pin **54321**
 2. Account Number **98765**         Pin 56789
