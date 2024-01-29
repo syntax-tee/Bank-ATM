@@ -111,23 +111,19 @@ public class ATM {
 
     // return object of specified Transaction subclass
     private Transaction createTransaction(int type) {
-        Transaction temp = null; // temporary Transaction variable
+        Transaction temp = switch (type) {
+            case BALANCE_INQUIRY -> // create new BalanceInquiry transaction
+                    new BalanceInquiry(
+                            currentAccountNumber, screen, bankDatabase);
+            case WITHDRAWAL -> // create new Withdrawal transaction
+                    new Withdrawal(currentAccountNumber, screen, bankDatabase, keypad, cashDispenser);
+            case DEPOSIT -> // create new Deposit transaction
+                    new Deposit(currentAccountNumber, screen,
+                            bankDatabase, keypad, depositSlot);
+            default -> null; // temporary Transaction variable
 
-        // determine which type of Transaction to create
-        switch (type) {
-            case BALANCE_INQUIRY: // create new BalanceInquiry transaction
-                temp = new BalanceInquiry(
-                        currentAccountNumber, screen, bankDatabase);
-                break;
-            case WITHDRAWAL: // create new Withdrawal transaction
-                temp = new Withdrawal(currentAccountNumber, screen,
-                        bankDatabase, keypad, cashDispenser);
-                break;
-            case DEPOSIT: // create new Deposit transaction
-                temp = new Deposit(currentAccountNumber, screen,
-                        bankDatabase, keypad, depositSlot);
-                break;
-        }
+            // determine which type of Transaction to create
+        };
 
         return temp; // return the newly created object
     }
